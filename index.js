@@ -31,11 +31,10 @@ app.post("/send-transaction", async (requestParam, responseParam) => {
       res.headers
     );
 
-    if (res.statusCode == 200) {
-      responseParam.send(`transaction success with code ${res.statusCode}`);
-    } else {
-      responseParam.send(`Something wrong with code ${res.statusCode}`);
-    }
+    responseParam.status(res.statusCode).json({
+      responseCode: res.statusCode,
+      message: data.toString("utf8"),
+    });
   } catch (error) {
     console.log(error);
   }
