@@ -8,9 +8,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/send-transaction", async () => {
-  // const { data, res } = await request(url, options);
-  // const { data, res } = await request("http://cnodejs.org/");
+app.post("/send-transaction", async (requestParam, responseParam) => {
   const payload = getPayload();
   console.log(`payload=${payload}`);
   try {
@@ -34,9 +32,9 @@ app.post("/send-transaction", async () => {
     );
 
     if (res.statusCode == 200) {
-      return `transaction success with code ${res.statusCode}`;
+      responseParam.send(`transaction success with code ${res.statusCode}`);
     } else {
-      return `Something wrong with code ${res.statusCode}`;
+      responseParam.send(`Something wrong with code ${res.statusCode}`);
     }
   } catch (error) {
     console.log(error);
