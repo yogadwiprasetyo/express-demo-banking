@@ -30,7 +30,7 @@ app.post("/send-transaction", async (requestParam, responseParam) => {
             },
             msgFlag: "0",
             msgData: {
-              data: "zUvcArlRssvv+LVV4LEbQ96JYlZQJlePAQeBlAvlwnEfizffh/+HCCD5P/mJrxObk7JqTCH3vKApJzt63kJ+VT/x51jcmWI8PnEETTjxDSI3+vNWuu4qHzrggu8j+vxlgUSbIPUXYd6DztxJfu/yxixIZcb7g5KGhXyWdsyrQlfcIt7PNv/K6MqB8wS3tgTJRo24yZhsyN4kBa3uh8xPd+g1jA74pI/5/KcAZBJp4BfcQxM53wVKvWWEsAhc8o/SE4vWe5rzuw2dgjQIxJbM0QCTbOsiS4mC3qKbM2JEPF85g35l65LKuaWhugRFBzRb"
+              data: "Apa aja bisa dah!"
             }
           },
           callbackUrl: "https://sistemadev.com/osp",
